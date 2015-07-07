@@ -37,9 +37,6 @@
             "sources":{
                 "TL_ROOT/system/modules/codeowl_grid_control": "system/modules/codeowl_grid_control"
             },
-         "userfiles": {
-            "TL_ROOT/files/theme": "themes"
-        },
         "branch-alias": {
         			"dev-master": "1.0.0"
         		}
