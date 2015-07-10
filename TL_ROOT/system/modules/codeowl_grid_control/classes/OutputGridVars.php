@@ -410,7 +410,10 @@ class OutputGridVars extends \Controller
        if (in_array($el->type, $GLOBALS['TL_WRAPPERS']['start'])) {
         return '<div style="background-color:#c2d679; box-sizing:border-box;width:100%; float:left; opacity:0.8; padding:0.2em; cursor:help; margin-bottom:.8rem;" class="grid_control '.$be_css.'" title="GRID CONTROL `-,-´"><div style="width:100%; float:left; margin-bottom:4px;">CSS-Klassen: '.$be_css.'</div>'.implode("\n\r", $co_grid_arr).'</div>'.$strBuffer;
       }
-    return '<h3>'.deserialize($el->headline,true)['value'].'</h3><div style="background-color:#c2d679; box-sizing:border-box;width:100%; float:left; opacity:0.8; padding:0.2em; cursor:help; margin-bottom:.8rem;" class="grid_control '.$be_css.'" title="GRID CONTROL `-,-´"><div style="width:100%; float:left; margin-bottom:4px;">CSS-Klassen: '.$be_css.'</div>'.implode("\n\r", $co_grid_arr).'</div>'.$strBuffer;
+      $healine = deserialize($el->headline,true);
+      $healine = (isset($headline['value']))?'<h3>'.$headline['value'].'</h3>':'';
+
+    return $healine.'<div style="background-color:#c2d679; box-sizing:border-box;width:100%; float:left; opacity:0.8; padding:0.2em; cursor:help; margin-bottom:.8rem;" class="grid_control '.$be_css.'" title="GRID CONTROL `-,-´"><div style="width:100%; float:left; margin-bottom:4px;">CSS-Klassen: '.$be_css.'</div>'.implode("\n\r", $co_grid_arr).'</div>'.$strBuffer;
 
   }
 
